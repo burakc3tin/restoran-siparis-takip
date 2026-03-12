@@ -1,4 +1,4 @@
-# Suitable Sipariş Paneli
+#🍝 Suitable Sipariş Paneli
 
 Modern bir **Dijital Restoran Menüsü ve Sipariş Yönetim Paneli**.  
 React + Firebase altyapısı ile geliştirilmiş, AI destekli ve çok dilli bir restoran yönetim uygulamasıdır. :contentReference[oaicite:0]{index=0}
