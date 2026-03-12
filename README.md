@@ -1,60 +1,63 @@
-#Suitable Sipariş Paneli
+# 🍽️ Suitable Sipariş Paneli
+
+🌐 **Canlı Demo:**  
+https://suitable-restoran.web.app/
 
 Modern bir **Dijital Restoran Menüsü ve Sipariş Yönetim Paneli**.  
-React + Firebase altyapısı ile geliştirilmiş, AI destekli ve çok dilli bir restoran yönetim uygulamasıdır. :contentReference[oaicite:0]{index=0}
+React + Firebase ile geliştirilmiş, **AI destekli ve çok dilli** bir restoran yönetim uygulaması.
 
 ---
 
-# Konu
+# 📌 Konu
 
 Restoran veya kafe işletmelerinin:
 
-- Menülerini dijital olarak yönetmesini
-- Sipariş oluşturmasını
-- Ödeme işlemlerini takip etmesini
-- Ürünleri kolayca ekleyip düzenlemesini
+- 📋 Menülerini dijital olarak yönetmesini  
+- 🛒 Sipariş oluşturmasını  
+- 💳 Ödeme işlemlerini takip etmesini  
+- ✏️ Ürünleri kolayca ekleyip düzenlemesini  
 
 sağlayan **tek ekranlı bir yönetim paneli**.
 
 ---
 
-# Özellikler
+# ✨ Özellikler
 
-- **AI Açıklama**  
-  Groq AI (Llama-3) ile ürün açıklamaları otomatik oluşturulur. :contentReference[oaicite:1]{index=1}
+- 🤖 **AI Açıklama**  
+  Groq AI (Llama-3) ile ürün açıklamaları otomatik oluşturulur.
 
-- **Cloudinary Entegrasyonu**  
-  Ürün görselleri doğrudan buluta yüklenir. :contentReference[oaicite:2]{index=2}
+- ☁️ **Cloudinary Entegrasyonu**  
+  Ürün görselleri doğrudan buluta yüklenir.
 
-- **Firebase Firestore**  
-  Ürünler, kategoriler ve ödemeler gerçek zamanlı saklanır. :contentReference[oaicite:3]{index=3}
+- 🔥 **Firebase Firestore**  
+  Ürünler, kategoriler ve ödemeler gerçek zamanlı saklanır.
 
-- **QR Kod Sistemi**  
-  Menü veya ürünler için QR kod oluşturulur. :contentReference[oaicite:4]{index=4}
+- 📱 **QR Kod Sistemi**  
+  Menü veya ürünler için QR kod oluşturulur.
 
-- **Çoklu Dil Desteği**  
-  Türkçe, İngilizce, Rusça, Almanca ve Fransızca. :contentReference[oaicite:5]{index=5}
+- 🌍 **Çoklu Dil Desteği**  
+  Türkçe, İngilizce, Rusça, Almanca ve Fransızca.
 
-- **Sipariş & Sepet Sistemi**  
+- 🛒 **Sipariş & Sepet Sistemi**  
   Ürün ekleme, çıkarma ve ödeme akışı.
 
-- **Ödül Sistemi**  
-  Harcamaya göre seviye atlama (Bronz → Elmas). :contentReference[oaicite:6]{index=6}
+- 🏆 **Ödül Sistemi**  
+  Harcamaya göre seviye atlama (Bronz → Elmas).
 
-- **Geçmiş Ödemeler**  
-  Satışları görüntüleme ve filtreleme. :contentReference[oaicite:7]{index=7}
+- 📊 **Geçmiş Ödemeler**  
+  Satışları görüntüleme ve filtreleme.
 
-- **Dijital Fiş**  
-  Sipariş sonrası dijital adisyon oluşturma. :contentReference[oaicite:8]{index=8}
+- 🧾 **Dijital Fiş**  
+  Sipariş sonrası dijital adisyon oluşturma.
 
-- **Menü Paylaşımı**  
-  WhatsApp / Telegram üzerinden paylaşım. :contentReference[oaicite:9]{index=9}
+- 📤 **Menü Paylaşımı**  
+  Menü WhatsApp veya Telegram üzerinden paylaşılabilir.
 
 ---
 
-# Proje Yapısı
+# 🗂️ Proje Yapısı
 
-### components
+### 📦 components
 
 Uygulamanın tüm UI bileşenleri.
 
@@ -77,7 +80,7 @@ LanguageModal | Dil seçimi |
 
 ---
 
-### services
+### ⚙️ services
 
 Harici servis entegrasyonları.
 
@@ -91,7 +94,7 @@ languageService.js | Dil yönetimi |
 
 ---
 
-### hooks
+### 🧩 hooks
 
 | Dosya | Açıklama |
 |---|---|
@@ -100,23 +103,24 @@ useProductActions.js | Ürün işlemleri |
 
 ---
 
-### context
+### 🌐 context
 
 Global state yönetimi.
 
 ---
 
-### translations
+### 🌍 translations
 
-Tüm uygulama çevirileri.
+Uygulama çeviri dosyaları.
 
 ---
 
-# Kullanılan Teknolojiler
+# 🛠️ Kullanılan Teknolojiler
 
 - React
 - Vite
 - Firebase Firestore
+- Firebase Deploy
 - Groq AI (Llama-3)
 - Cloudinary
 - Bootstrap
@@ -124,7 +128,7 @@ Tüm uygulama çevirileri.
 
 ---
 
-# Ekran Görüntüleri
+# 📸 Ekran Görüntüleri
 
 ![Ekran 1](https://i.hizliresim.com/8o5x2kg.png)
 
