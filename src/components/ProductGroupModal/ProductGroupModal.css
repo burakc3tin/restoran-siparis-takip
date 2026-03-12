@@ -1,0 +1,124 @@
+.product-group-modal .modal-content {
+  background: var(--bg-panel);
+  border: 1px solid var(--neon-red-border);
+  box-shadow: 0 0 20px rgba(255, 30, 86, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.product-group-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 30, 86, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.product-group-modal .modal-title {
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.product-group-modal .groups-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+}
+
+.product-group-modal .groups-list::-webkit-scrollbar {
+  width: 6px;
+}
+.product-group-modal .groups-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.product-group-modal .groups-list::-webkit-scrollbar-thumb {
+  background-color: var(--neon-red);
+  border-radius: 3px;
+}
+
+.product-group-modal .list-group-item {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.product-group-modal .list-group-item:last-child {
+  border-bottom: none !important;
+}
+
+.product-group-modal .list-group-item:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.product-group-modal .btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.add-group-form .btn {
+  min-width: 48px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 575.98px) {
+  .product-group-modal {
+    padding: 0.5rem !important;
+  }
+  
+  .product-group-modal .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .product-group-modal .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .product-group-modal .modal-body {
+    padding: 1rem !important;
+  }
+
+  .product-group-modal .groups-list {
+    max-height: 40vh;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .product-group-modal .list-group-item {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+
+  .product-group-modal .list-group-item .d-flex {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .product-group-modal .list-group-item span {
+    width: 100%;
+    word-break: break-word;
+  }
+
+  /* Editing mode in mobile */
+  .editing-container {
+    flex-wrap: wrap;
+  }
+  
+  .editing-container .form-control {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .editing-container .btn {
+    flex: 1;
+  }
+}
+

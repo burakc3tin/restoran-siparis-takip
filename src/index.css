@@ -1,0 +1,164 @@
+:root {
+  --bg-dark: #07070a;
+  --bg-panel: #121216;
+  --bg-item: #18181f;
+  --neon-red: #ff0036;
+  --neon-red-glow: 0 0 8px rgba(255, 0, 54, 0.4), 0 0 15px rgba(255, 0, 54, 0.2);
+  --neon-red-border: 1px solid var(--neon-red);
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --font-main: "Gluten", system-ui, -apple-system, sans-serif;
+  --border-radius-panel: 12px;
+  --border-radius-item: 8px;
+  --border-radius-btn: 6px;
+  --neon-inset-glow: inset 0 0 10px rgba(255, 0, 54, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(circle at 0% 0%, #1a1a2e 0%, #07070a 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+  user-select: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  display: block; /* Tooltip logic works better with block body */
+}
+
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: move 20s infinite alternate linear;
+}
+
+.blob-white {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  animation-duration: 25s;
+}
+
+.blob-dark {
+  background: radial-gradient(circle, #2d3436 0%, transparent 70%);
+  bottom: -200px;
+  left: -100px;
+  animation-duration: 30s;
+  opacity: 0.6;
+}
+
+.blob-accent {
+  background: radial-gradient(circle, rgba(255, 0, 54, 0.15) 0%, transparent 70%);
+  top: 40%;
+  left: 30%;
+  width: 400px;
+  height: 400px;
+  animation-duration: 20s;
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(5vw, 10vh) scale(1.1); }
+  66% { transform: translate(-5vw, 15vh) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px;
+}
+
+@media (max-width: 900px) {
+  #root {
+    align-items: flex-start;
+    padding: 12px;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 54, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 54, 0.6);
+}
+
+/* Custom Neon Tooltip Styling */
+.tooltip-inner {
+  background-color: var(--bg-panel) !important;
+  border: var(--neon-red-border) !important;
+  color: var(--text-main) !important;
+  font-family: var(--font-main) !important;
+  font-size: 0.8rem !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 15px rgba(255, 0, 54, 0.4) !important;
+  opacity: 1 !important;
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--neon-red) !important;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--neon-red) !important;
+}
+
+.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: var(--neon-red) !important;
+}
+
+.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: var(--neon-red) !important;
+}
+

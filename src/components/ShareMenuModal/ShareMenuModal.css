@@ -1,0 +1,108 @@
+.share-menu-modal .modal-content {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--neon-red);
+  box-shadow: 0 0 40px rgba(255, 0, 54, 0.4);
+  border-radius: 20px;
+  color: var(--text-main);
+}
+
+.share-menu-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 24px;
+}
+
+.share-menu-modal .modal-title {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 0, 54, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.share-menu-modal .btn-close {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.share-menu-modal .btn-close:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) !important;
+  transform: rotate(90deg);
+}
+
+/* Empty State Styling */
+.empty-state-warning .warning-icon-wrapper i {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.5));
+}
+
+.empty-state-warning h5 {
+  letter-spacing: 1px;
+}
+
+/* Share Content Styling */
+.share-preview-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.share-preview-text {
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.share-preview-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.share-preview-box::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 54, 0.4);
+  border-radius: 10px;
+}
+
+/* Action Buttons */
+.btn-share-action {
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.btn-share-action.copied {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: white !important;
+}
+
+.btn-whatsapp {
+  background-color: #25D366 !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57 !important;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.btn-telegram {
+  background-color: #0088cc !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-telegram:hover {
+  background-color: #0077b5 !important;
+  box-shadow: 0 0 15px rgba(0, 136, 204, 0.5) !important;
+  transform: translateY(-2px);
+}

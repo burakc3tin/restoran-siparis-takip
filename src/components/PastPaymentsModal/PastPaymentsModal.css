@@ -1,0 +1,280 @@
+.past-payments-modal .modal-content {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--neon-red);
+  box-shadow: 0 0 40px rgba(255, 0, 54, 0.4);
+  border-radius: 20px;
+  color: var(--text-main);
+  min-height: 80vh;
+}
+
+@media (min-width: 992px) {
+  .past-payments-modal .modal-xl {
+    max-width: 1140px;
+  }
+}
+
+.past-payments-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+}
+
+.past-payments-modal .modal-title {
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(255, 0, 54, 0.5);
+  letter-spacing: 1px;
+}
+
+.past-payments-modal .btn-close {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.past-payments-modal .btn-close:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) !important;
+  transform: rotate(90deg);
+}
+
+.payments-controls {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sort-dropdown {
+  color: white !important;
+  border-color: rgba(255, 0, 54, 0.5) !important;
+  transition: all 0.2s ease;
+}
+
+.sort-dropdown:hover, .sort-dropdown[aria-expanded="true"] {
+  background-color: rgba(255, 0, 54, 0.2) !important;
+  border-color: var(--neon-red) !important;
+  box-shadow: 0 0 15px rgba(255, 0, 54, 0.3) !important;
+}
+
+.btn-delete-selected {
+  background: linear-gradient(135deg, rgba(200, 0, 40, 0.8) 0%, rgba(255, 0, 54, 1) 100%) !important;
+  border: none !important;
+  box-shadow: 0 0 15px rgba(255, 0, 54, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-delete-selected:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 0, 54, 0.6) !important;
+}
+
+.btn-delete-selected:disabled {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: none !important;
+}
+
+.payments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 10px 5px;
+  align-items: start;
+}
+
+.payment-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.payment-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.payment-card.selected {
+  border-color: var(--neon-red);
+  background: linear-gradient(180deg, rgba(255, 0, 54, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+  box-shadow: 0 5px 20px rgba(255, 0, 54, 0.15);
+}
+
+.payment-card.selected::before {
+  background-color: var(--neon-red);
+  box-shadow: 0 0 10px var(--neon-red);
+}
+
+.payment-date {
+  font-family: monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-checkbox .form-check-input {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: var(--neon-red);
+  border-color: var(--neon-red);
+  box-shadow: 0 0 10px rgba(255, 0, 54, 0.5);
+}
+
+.select-all-check {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px;
+  line-height: normal !important;
+}
+
+.select-all-check .form-check-input {
+  margin-top: 0 !important;
+  float: none !important;
+}
+
+.select-all-check .form-check-label {
+  cursor: pointer;
+  user-select: none;
+  margin-top: 0 !important;
+}
+
+.empty-payments-message {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.empty-payments-message i {
+  font-size: 4rem;
+  color: rgba(255, 0, 54, 0.3);
+  filter: drop-shadow(0 0 10px rgba(255, 0, 54, 0.2));
+}
+
+.empty-payments-message p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.expanded-products-list {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px 15px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.expanded-products-list::-webkit-scrollbar,
+.payments-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.expanded-products-list::-webkit-scrollbar-thumb,
+.payments-list-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 54, 0.4);
+  border-radius: 10px;
+}
+
+.controls-right {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: center !important;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .payments-controls {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 15px !important;
+    padding: 15px !important;
+  }
+  
+  .controls-right {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+  
+  .select-all-check {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .sort-dropdown, .btn-delete-selected {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .past-payments-modal .modal-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .payments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .payment-card {
+    padding: 15px;
+  }
+  
+  .payment-date {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+}
+
+.btn-show-receipt {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 12px !important;
+}
+
+.btn-show-receipt:hover {
+    background: rgba(255, 0, 54, 0.1) !important;
+    border-color: var(--neon-red) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 54, 0.2) !important;
+}
+
+.btn-show-receipt i {
+    transition: transform 0.3s ease;
+}
+
+.btn-show-receipt:hover i {
+    transform: scale(1.2) rotate(-10deg);
+}

@@ -1,0 +1,39 @@
+.payment-delete-modal .modal-content {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--neon-red);
+  box-shadow: 0 0 30px rgba(255, 0, 54, 0.4);
+  border-radius: 16px;
+}
+
+.delete-icon-wrapper i {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 54, 0.5));
+}
+
+.btn-delete-cancel {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
+}
+
+.btn-delete-confirm {
+  background: linear-gradient(135deg, #c80028 0%, #ff0036 100%) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 15px rgba(255, 0, 54, 0.3) !important;
+}
+
+.btn-delete-confirm:hover:not(:disabled) {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}

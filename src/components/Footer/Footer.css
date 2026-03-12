@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  padding: 15px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-text {
+  font-family: 'Butterfly Kids', cursive;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}

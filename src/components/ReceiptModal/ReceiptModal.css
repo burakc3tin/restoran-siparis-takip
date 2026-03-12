@@ -1,0 +1,179 @@
+.receipt-modal .modal-content {
+    background-color: var(--bg-panel);
+    border: var(--neon-red-border);
+    box-shadow: 0 0 30px rgba(255, 0, 54, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.receipt-modal .btn-close {
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.receipt-modal .btn-close:hover {
+    opacity: 1;
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) !important;
+    transform: rotate(90deg);
+}
+
+.receipt-paper {
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Receipt jagged edges simulation */
+.receipt-paper::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(135deg, #f8f9fa 5px, transparent 0) 0 5px,
+                linear-gradient(45deg, #f8f9fa 5px, transparent 0) 0 5px;
+    background-size: 10px 10px;
+    background-repeat: repeat-x;
+}
+
+.receipt-paper::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(-135deg, #f8f9fa 5px, transparent 0) 0 5px,
+                linear-gradient(-45deg, #f8f9fa 5px, transparent 0) 0 5px;
+    background-size: 10px 10px;
+    background-repeat: repeat-x;
+}
+
+.receipt-brand-name {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.receipt-divider {
+    border-top: 2px solid #000;
+    margin: 10px 0;
+}
+
+.receipt-divider-dashed {
+    border-top: 1px dashed #000;
+    margin: 10px 0;
+}
+
+.receipt-subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.receipt-info {
+    font-size: 0.85rem;
+}
+
+.receipt-item {
+    font-size: 0.85rem;
+}
+
+.receipt-footer p {
+    font-size: 0.8rem;
+}
+
+.receipt-qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.receipt-qr-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.btn-print {
+    background: var(--neon-red);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-print:hover {
+    background: #ff0036;
+    box-shadow: 0 0 15px rgba(255, 0, 54, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Printing logic */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .receipt-paper, .receipt-paper * {
+        visibility: visible;
+    }
+    .receipt-paper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        padding: 0;
+        background-color: white;
+    }
+    .modal-header, .btn-print, .modal-backdrop {
+        display: none !important;
+    }
+    .modal {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+    .modal-dialog {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .modal-content {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    .modal-body {
+        padding: 0 !important;
+        background: transparent !important;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 576px) {
+    .receipt-paper {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    .receipt-brand-name {
+        font-size: 1.5rem;
+    }
+}
